@@ -1,0 +1,64 @@
+
+
+    <div class="alert alert-dismissible alert-success" ng-show="postPosted">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <p>Your post is uploaded</p>
+    </div>
+
+    <form class="form-horizontal ng-valid ng-submitted ng-dirty ng-valid-number" style="">
+      <div class="container">
+
+        <div class="form-group">
+          <div class="image-frame" ng-show=emptyImg>
+            <!--<div class="image-frame">-->
+              <a href="#" ng-click="takePicture()"><i class="glyphicon-camera glyphicon"></i></a>
+          </div>
+          <div class="image-frame" ng-hide=emptyImg>
+            <img src="" id="post_image" >
+          </div>
+
+        </div> <!-- image form group-->
+
+
+        <div class="form-group">
+
+          <div class="col-xs-12 col-md-10 col-md-offset-1">
+            <textarea ng-model="post.message" id="textArea" rows="3" class="form-control ng-pristine ng-valid ng-touched" placeholder="Type your message here" style=""></textarea>
+
+          </div>
+        </div> <!-- message group-->
+
+        <div class="form-group">
+          <div class="col-xs-6 col-xs-offset-1">
+            <input type="text" ng-model="post.location" class="form-control ng-pristine ng-valid ng-touched"
+                   placeholder="Location..." style="">
+          </div>
+          <!--@todo add some tooltips instead of placeholders-->
+          <div class="input-group col-xs-3">
+            <span class="input-group-addon">$</span>
+            <input type="number" ng-model="post.price" placeholder="Money cannot buy everything..." class="form-control ng-valid ng-dirty ng-valid-number ng-touched " style="">
+
+          </div>
+        </div> <!-- location group-->
+
+        <!--<div class="form-group ">-->
+
+        <!--</div> &lt;!&ndash;price group&ndash;&gt;-->
+
+        <div class="form-group">
+          <div class="col-xs-10 col-xs-offset-1 butt-center">
+            <ul>
+              <li>
+                <a type="button" ng-click="upload()" ng-disabled="emptyImg" class="btn btn-success">Upload</a>
+              </li>
+
+              <li>
+                <a type="button" data-ui-sref="main" ui-sref="main" class="btn btn-default">Cancel</a>
+              </li>
+            </ul>
+
+        </div> <!-- Upload form group-->
+      </div>
+      </div>
+    </form>
+

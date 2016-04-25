@@ -1,0 +1,68 @@
+  <!--<ion-content class="home">-->
+<!--<div class="back-image">-->
+
+<!--</div>-->
+    <div class="background-img">
+    <div class="alert alert-dismissible alert-danger" ng-show="wrongLogin">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <p>{{loginError}}</p>
+    </div>
+    <div class="container home">
+
+
+      <form class="form-horizontal ng-valid ng-dirty ng-valid-parse" style="">
+
+        <div class="form-group">
+          <div class="col-xs-10 col-xs-offset-1">
+            <input type="text" placeholder="Email" ng-model="user.email" id="inputEmail" class="form-control ng-untouched ng-valid ng-dirty ng-valid-parse" style="">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-10 col-xs-offset-1">
+            <input type="password" placeholder="Password" ng-model="user.password" id="inputPassword" class="form-control ng-untouched ng-valid ng-dirty ng-valid-parse" style="">
+
+          </div>
+        </div>
+
+        <div class="form-group">
+
+
+          <div class=" col-xs-10 col-xs-offset-1">
+            <button class="btn btn-success login-butt" ng-click="local_login()" type="button">
+              Login
+            </button>
+          </div>
+          <div class=" col-xs-10 col-xs-offset-1">
+            <button class="btn btn-primary reg-butt" ng-click="open_reg()" type="button">Register</button>
+          </div>
+
+
+
+        </div>  <!-- form-group for buttons-->
+
+        <div class="form-group">
+
+          <div class="col-xs-10 col-xs-offset-1 butt-center">
+              <ul>
+                <li><a type="button" class="btn btn-primary" ng-click="fb_login()">
+                  <i class="glyphicon glyphicon-user"></i>
+                </a>
+                </li>
+                <li>
+                  <a type="button" class="btn btn-danger">
+                    <i class="glyphicon glyphicon-user"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+
+
+        </div>
+
+      </form>
+
+    </div>
+    </div>
+  <!--</ion-content>-->

@@ -1,0 +1,52 @@
+
+<!--<ion-content>-->
+
+  <ul class="dynamic-grid" angular-grid="posts"  ag-id="gallery" ag-options="angularGridOptions"        >
+    <li data-ng-repeat="post in posts" class="grid" ng-click="open(post)">
+      <!--<a href="#" data-toggle="modal" data-target="#postDetails">-->
+      <img src="{{post.image}}" class="grid-img"/>
+
+      <script type="text/ng-template" id="post_modal.html">
+          <div class="modal-header">
+            <h4 class="modal-title">Post Details</h4>
+            <button type="button" class="close" data-dismiss="modal" ng-click="close()">&times;</button>
+          </div>
+
+          <div class="modal-body">
+            <div class="row">
+              <img src="{{post.image}}" class="post-modal-image col-xs-12"/>
+            </div>
+            <div class="row">
+              <p class="col-xs-6">{{post.price}}</p>
+              <p class="col-xs-6">{{post.message}}</p>
+            </div>
+
+            <div class="row">
+              <div class="comment-box col-xs-12">
+                <ul>
+                  <li data-ng-repeat="comm in comments">
+                    <h6>{{comm.author}}</h6>
+                    <p>{{comm.text}}</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="row gimme-space">
+              <div class="col-xs-12">
+                <div class="input-group">
+                  <input type="text" class="form-control" ng-model="comment.text" placeholder="Wanna comment?">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" ng-click="addComment()"><i class="glyphicon glyphicon-send"></i> </button>
+                  </span>
+                </div><!-- /input-group -->
+              </div><!-- /.col-lg-6 -->
+            </div>
+          </div>
+      </script>
+
+
+    </li>
+  </ul>
+
+  <!--</ion-content>-->

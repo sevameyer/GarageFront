@@ -1,0 +1,48 @@
+
+
+    <div class="container" ng-init="getUserPosts()">
+      <ul class="my-post col-xs-12">
+        <li data-ng-repeat="post in my_posts">
+          <div class="row dropdown">
+            <img src="{{post.image}}" id="postImage"
+                 data-toggle="dropdown" class="post-modal-image col-xs-12 dropdown-toggle"/>
+
+            <ul class="dropdown-menu" aria-labelledby="postImage">
+
+              <li><a href="#" ng-click="deletePost(post._id)">Remove Post</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Disable Post</a></li>
+              <li><a href="#">Enable Post</a></li>
+            </ul>
+
+          </div>
+          <div class="row">
+            <p class="col-xs-6">{{post.price}}</p>
+            <p class="col-xs-6">{{post.message}}</p>
+          </div>
+
+          <div class="row">
+            <div class="comment-box col-xs-10 col-xs-offset-1">
+              <ul>
+                <li data-ng-repeat="comm in post.comments">
+                  <h4>{{comm.author}}</h4>
+                  <p>{{comm.text}}</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row gimme-space">
+            <div class="col-xs-12">
+              <div class="input-group">
+                <input type="text" class="form-control" ng-model="comment.text" placeholder="Wanna comment?">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" ng-click="addComment(post)"><i class="glyphicon glyphicon-send"></i> </button>
+                  </span>
+              </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+          </div>
+        </li>
+      </ul>
+    </div>
+

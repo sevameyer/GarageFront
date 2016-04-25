@@ -1,0 +1,227 @@
+/* Empty. Add your own CSS if you like */
+
+body {
+  /*background-image: url('../img/shop.jpg');*/
+  font-size: 26px;
+  padding:70px 0;
+}
+
+.background-img {
+  /*background-image: url('../img/shop.jpg');*/
+  /*opacity: 0.5 ;*/
+}
+textarea {
+  resize: none;
+  overflow-y: auto;
+}
+
+.logo {
+  font-family: 'Dancing Script', cursive;
+  font-size:35px;
+  text-align: center;
+}
+.login-butt, .reg-butt {
+  width: 100%
+}
+
+.my-post {
+  font-size: 12px;
+  list-style: outside none none;
+  /*text-align: center;*/
+
+}
+
+.my-post li {
+  border: 1px solid rgba(255,255,255,0.5);
+  padding: 5px;
+}
+
+.butt-center ul {
+  list-style: none;
+  margin : 0;
+  padding: 0;
+}
+
+.butt-center {
+  text-align: center;
+}
+
+.butt-center ul > li {
+  display: inline-block;
+}
+
+.butt-center ul > li:last-child {
+  margin-left: 20px;
+}
+
+.search-field {
+  /*border-radius: 100px;*/
+}
+.search-butt .notActive{
+  background-color: rgba(0,0,0,0);
+}
+
+.btn {
+  /*width: 100%;*/
+  display: block;
+  /*padding: 20px;*/
+  margin-bottom: 20px;
+}
+
+
+.image-frame {
+  border: 2px solid #00bc8c;
+  /*float: left;*/
+  height: 200px;
+  margin: 0 auto;
+  opacity: 0.45;
+  text-align: center;
+  width: 300px;
+}
+.image-frame a {
+  font-size:140px;
+}
+.image-frame img {
+  min-width: 100%;
+  max-width:100%;
+  max-height: 100%;
+}
+.footer-ul {
+  float: none !important;
+  text-align: center;
+}
+.back-image {
+
+  background-size: auto;
+}
+
+ion-view ion-content.home{
+  background: url("../img/shop.jpg");
+  width: 100%;
+}
+
+.container.home {
+  position: relative !important;
+  top: 100px !important;
+}
+
+.grid {
+  border: 1px solid #cccccc;
+  list-style: none;
+  background: #ffffff;
+  box-sizing: border-box;
+  -moz-box-sizing : border-box;
+  -webkit-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+}
+.grid-img {
+  width: 100%;
+  vertical-align: middle;
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.grid-img.img-loaded{
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-dialog {
+  margin:30px auto;
+}
+
+.modal-content {
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+.comment-box {
+  height: 90px;
+  overflow-y: auto;
+}
+.comment-box > ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+.comment-box ul li {
+  background-color: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  margin: 4px 0;
+  padding: 3px;
+}
+.comment-box li > h6 {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+  margin: 2px 0 10px;
+  padding-bottom: 8px;
+}
+.row.gimme-space {
+  margin-top: 15px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.search-form .form-group {
+  float: right !important;
+  transition: all 0.35s, border-radius 0s;
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+}
+.search-form .form-group input.form-control {
+  padding-right: 20px;
+  border: 0 none;
+  background: transparent;
+  box-shadow: none;
+  display:block;
+}
+.search-form .form-group input.form-control::-webkit-input-placeholder {
+  display: none;
+}
+.search-form .form-group input.form-control:-moz-placeholder {
+  /* Firefox 18- */
+  display: none;
+}
+.search-form .form-group input.form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  display: none;
+}
+.search-form .form-group input.form-control:-ms-input-placeholder {
+  display: none;
+}
+.search-form .form-group:hover,
+.search-form .form-group.hover {
+  width: 100%;
+  border-radius: 4px 25px 25px 4px;
+}
+.search-form .form-group span.form-control-feedback {
+  position: absolute;
+  top: -1px;
+  right: -2px;
+  z-index: 2;
+  display: block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  color: #3596e0;
+  left: initial;
+  font-size: 14px;
+}
+.modal-title {
+  float: left !important;
+}
+.modal-body{
+  font-size:12px;
+}

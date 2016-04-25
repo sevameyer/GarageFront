@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=yes, width=device-width">
+  <!--<meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">-->
+  <title></title>
+
+  <link href="https://bootswatch.com/darkly/bootstrap.css" rel="stylesheet">
+  <link href="lib/angular-bootstrap/ui-bootstrap-csp.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+  <link href="css/ionic.app.css" rel="stylesheet">
+  -->
+
+  <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+  <script src="lib/jquery/dist/jquery.js"></script>
+  <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="lib/angular-animate/angular-animate.js"></script>
+  <script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="lib/angular-route/angular-route.js"></script>
+  <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="lib/angulargrid/angulargrid.js"></script>
+  <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+
+  <!-- your app's js -->
+  <script src="js/app.js"></script>
+  <script src="js/services/sharedUser.js"></script>
+  <script src="js/services/postService.js"></script>
+  <script src="js/controllers/HomeController.js"></script>
+  <script src="js/controllers/MainController.js"></script>
+  <script src="js/controllers/PostController.js"></script>
+</head>
+<body ng-app="garage">
+
+<!--<ion-side-menus>
+
+  &lt;!&ndash; Center content &ndash;&gt;
+  <ion-side-menu-content>
+    <ion-header-bar class="bar-dark">
+      <h1 class="title">Todo</h1>
+    </ion-header-bar>
+    <ion-content>
+    </ion-content>
+  </ion-side-menu-content>
+
+  &lt;!&ndash; Left menu &ndash;&gt;
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-dark">
+      <h1 class="title">Projects</h1>
+    </ion-header-bar>
+  </ion-side-menu>
+
+</ion-side-menus>-->
+<!--<ion-pane>-->
+  <ion-header-bar class="bar-stable">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="row">
+        <p class="logo col-xs-10 col-xs-offset-1" ng-hide="isSearching">Garage Sale</p>
+
+        <!--<div class="input-group ">-->
+          <!--<input ng-show="isSearching" ng-blur="isSearching=false" type="text"-->
+                 <!--class="form-control search-field" placeholder="Location...">-->
+            <!--<span class="input-group-btn">-->
+              <!--<button class="btn btn-default search-butt {notActive: isSearching==false}" ng-click="isSearching=true" type="button"><i class="glyphicon glyphicon-search"></i> </button>-->
+            <!--</span>-->
+        <!--</div>-->
+
+          <!--<div class="col-xs-4 col-xs-offset-3">-->
+            <!--<form action="" class="search-form">-->
+              <!--<div class="form-group has-feedback">-->
+                <!--<label for="search" class="sr-only">Search</label>-->
+                <!--<input type="text" class="form-control" name="search" id="search" placeholder="search">-->
+                <!--<span class="glyphicon glyphicon-search form-control-feedback"></span>-->
+              <!--</div>-->
+            <!--</form>-->
+          <!--</div>-->
+        </div>
+      </div>
+    </nav>
+  </ion-header-bar>
+
+  <!--<ion-content>-->
+  <!--</ion-content>-->
+<!--</ion-pane>-->
+
+<!--<ion-nav-view></ion-nav-view>-->
+<div ui-view></div>
+
+<ion-footer-bar class="bar bar-footer" ng-controller="AppCtrl" ng-hide="isActive('/home') || isActive('/reg')">
+  <nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+    <ul class="nav navbar-nav row footer-ul">
+      <li class="col-xs-3" ng-class="{ active: isActive('/post') }"><a data-ui-sref="post"><i class="glyphicon glyphicon-edit"></i> </a></li>
+      <li class="col-xs-3" ng-class="{ active: isActive('/main') }"><a class="" data-ui-sref="main"><i class="glyphicon glyphicon-th"></i> </a></li>
+      <li class="col-xs-3" ng-class="{ active: isActive('/myposts') }"><a data-ui-sref="myposts"><i class="glyphicon glyphicon-home"></i></a></li>
+      <li class="col-xs-3" ng-class="{ active: isActive('/home') }" ng-click="logout()"><a data-ui-sref="home"><i class="glyphicon glyphicon-log-out"></i> </a></li>
+    </ul>
+    </div>
+  </nav>
+
+</ion-footer-bar>
+</body>
+</html>
